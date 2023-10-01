@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Groove</string>
+    <string name="title_activity_bottom_navigation_menu">Bottom_navigation_menu</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="home">Home</string>
+    <string name="liked">Liked</string>
+    <string name="playlist">Playlist</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="explore_your_music">Explore your Music</string>
+    <string name="explore">EXPLORE</string>
+    <string name="your_music">YOUR MUSIC</string>
+    <string name="get_your_all_music_here">Get and play all your music here</string>
+    <string name="hint1">Search for a song...</string>
+    <string name="songs_list">Songs list</string>
+</resources>
