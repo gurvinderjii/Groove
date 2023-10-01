@@ -14,5 +14,5 @@
     <string name="your_music">YOUR MUSIC</string>
     <string name="get_your_all_music_here">Get and play all your music here</string>
     <string name="hint1">Search for a song...</string>
-    <string name="songs_list">Songs list</string>
+    <string name="songs_list">Songs:</string>
 </resources>

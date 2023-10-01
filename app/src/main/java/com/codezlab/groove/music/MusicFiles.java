@@ -1,5 +1,6 @@
 package com.codezlab.groove.music;
 
+import java.util.ArrayList;
 import java.util.PrimitiveIterator;
 
 public class MusicFiles {
@@ -7,14 +8,12 @@ public class MusicFiles {
     private String title;
     private String artist;
     private String duration;
-
     public MusicFiles(String path, String title, String artist, String duration) {
         this.path = path;
         this.title = title;
         this.artist = artist;
         this.duration = duration;
     }
-    public MusicFiles(){}
 
     public String getPath() {
         return path;

@@ -6,6 +6,7 @@
     android:layout_height="wrap_content">
 
     <ImageView
+        android:id="@+id/setImageIcon"
         android:layout_width="45dp"
         android:layout_height="match_parent"
         android:layout_margin="5dp"
@@ -23,12 +24,12 @@
             android:fontFamily="@font/poppins"
             android:textSize="20sp"
             android:maxLines="1"
-            android:id="@+id/tatle"
+            android:id="@+id/setTitle"
             android:textColor="@color/white"
             tools:text="Ocean eyes" />
 
         <TextView
-            android:id="@+id/artist"
+            android:id="@+id/setArtist"
             android:maxLines="1"
             android:textColor="@color/gray"
             android:textSize="16sp"

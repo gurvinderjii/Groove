@@ -68,6 +68,7 @@
     </RelativeLayout>
 
     <TextView
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:text="@string/songs_list"
         android:textColor="@color/white"
@@ -79,6 +80,7 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
+        android:id="@+id/recyclerViewHome"
         android:layout_height="wrap_content"
         tools:listitem="@layout/music_view"
         tools:itemCount="10"/>
