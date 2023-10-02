@@ -1,9 +1,8 @@
 package com.codezlab.groove.music;
 
-import java.util.ArrayList;
-import java.util.PrimitiveIterator;
+import java.io.Serializable;
 
-public class MusicFiles {
+public class MusicFiles implements Serializable {
     private String path;
     private String title;
     private String artist;

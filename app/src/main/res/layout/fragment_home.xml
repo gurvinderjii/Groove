@@ -5,9 +5,9 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg_1"
     android:orientation="vertical"
-    android:padding="10dp"
+    android:paddingRight="20dp"
+    android:paddingLeft="20dp"
     tools:context=".HomeFragment">
-
     <View
         android:layout_width="match_parent"
         android:layout_height="30dp"/>
@@ -19,8 +19,7 @@
         android:text="@string/explore"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="35sp" />
-
+        android:textSize="38sp" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -29,8 +28,7 @@
         android:text="@string/your_music"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="35sp" />
-
+        android:textSize="38sp" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -39,22 +37,22 @@
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="18sp" />
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp">
         <EditText
             android:hint="@string/hint1"
             android:textColorHint="@color/gray"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
+            android:paddingStart="20dp"
+            android:maxLines="1"
+            android:paddingEnd="10dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/bg2"/>
-
+            android:background="@drawable/bg_2"/>
         <ImageView
             android:layout_centerVertical="true"
             android:layout_width="40dp"
@@ -64,7 +62,6 @@
             android:background="@drawable/rounded_shape"
             android:src="@drawable/search_icon"
             android:layout_alignParentEnd="true"/>
-
     </RelativeLayout>
 
     <TextView
@@ -73,16 +70,13 @@
         android:text="@string/songs_list"
         android:textColor="@color/white"
         android:textSize="18sp"
-        android:layout_margin="15dp"
+        android:layout_margin="10dp"
         android:fontFamily="@font/poppins_light"
-
         android:layout_height="wrap_content"/>
-
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:id="@+id/recyclerViewHome"
         android:layout_height="wrap_content"
         tools:listitem="@layout/music_view"
         tools:itemCount="10"/>
-
 </LinearLayout>

@@ -23,30 +23,26 @@ public class MusicListAdapter extends RecyclerView.Adapter<MusicListAdapter.Musi
         this.context = context;
         this.musicFiles = musicFiles;
     }
-
     @NonNull
     @Override
     public MusicViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(context).inflate(R.layout.music_view,parent,false);
         return new MusicViewHolder(v);
     }
-
     @Override
     public void onBindViewHolder(@NonNull MusicViewHolder holder, int position) {
         MusicFiles songData = musicFiles.get(position);
-        holder.title.setText(songData.getArtist());
-        holder.artist.setText(songData.getTitle());
+        holder.title.setText(songData.getTitle());
+        holder.artist.setText(songData.getDuration());
     }
-
     @Override
     public int getItemCount() {
         return musicFiles.size();
     }
     public class MusicViewHolder extends RecyclerView.ViewHolder {
-
         TextView artist,title;
         ImageView songIcon;
-        public MusicViewHolder(@NonNull View itemView) {
+        public MusicViewHolder(View itemView) {
             super(itemView);
             songIcon = itemView.findViewById(R.id.setImageIcon);
             artist = itemView.findViewById(R.id.setArtist);

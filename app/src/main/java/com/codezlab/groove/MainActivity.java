@@ -2,12 +2,15 @@ package com.codezlab.groove;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.Manifest;
+import android.app.Activity;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
@@ -16,6 +19,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.provider.*;
+import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
 
@@ -32,8 +36,6 @@ public class MainActivity extends AppCompatActivity {
                                     "android.permission.READ_MEDIA_AUDIO"};
     private int REQUEST_CODE = 123;
     ActivityMainBinding binding;
-    RecyclerView recyclerView;
-    ArrayList<MusicFiles> musicFiles = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,32 +61,6 @@ public class MainActivity extends AppCompatActivity {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                 requestPermissions(permissions,REQUEST_CODE);
             }
-        }
-        recyclerView = findViewById(R.id.recyclerViewHome);
-        String[] projection = {
-                MediaStore.Audio.Media.DATA,
-                MediaStore.Audio.Media.TITLE,
-                MediaStore.Audio.Media.ARTIST,
-                MediaStore.Audio.Media.DURATION
-                };
-        Cursor cursor = getContentResolver().query(MediaStore.Audio.Media.EXTERNAL_CONTENT_URI,projection,null,null,null);
-        if (cursor!=null){
-            while (cursor.moveToNext()){
-                MusicFiles songData = new MusicFiles(
-                        cursor.getString(0),
-                        cursor.getString(1),
-                        cursor.getString(2),
-                        cursor.getString(3));
-                if (new File(songData.getPath()).exists()){
-                    musicFiles.add(songData);
-                }
-            }
-        }
-        if (musicFiles.size()==0){
-//            Handle this here
-        }else {
-            recyclerView.setLayoutManager(new LinearLayoutManager(this));
-            recyclerView.setAdapter(new MusicListAdapter(musicFiles,getApplicationContext()));
         }
         super.onStart();
     }
@@ -119,5 +95,4 @@ public class MainActivity extends AppCompatActivity {
         FragmentManager manager = getSupportFragmentManager();
         manager.beginTransaction().replace(R.id.nav_view,fragment).commit();
     }
-
 }
