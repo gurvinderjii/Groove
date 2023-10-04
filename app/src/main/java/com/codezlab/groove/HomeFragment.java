@@ -24,11 +24,12 @@ import java.util.ConcurrentModificationException;
 public class HomeFragment extends Fragment {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-    ArrayList<MusicFiles> musicFiles = new ArrayList<>();
+    public static ArrayList<MusicFiles> musicFiles = new ArrayList<>();
     private String mParam1;
     private String mParam2;
     private RecyclerView recyclerView;
-    public HomeFragment() {}
+    public HomeFragment() {
+    }
 
     public static HomeFragment newInstance(String param1, String param2) {
         HomeFragment fragment = new HomeFragment();
@@ -91,9 +92,7 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view= inflater.inflate(R.layout.fragment_home, container, false);
-
         recyclerView = view.findViewById(R.id.recyclerViewHome);
-
         return view;
     }
 

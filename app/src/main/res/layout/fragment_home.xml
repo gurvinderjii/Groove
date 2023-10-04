@@ -19,7 +19,7 @@
         android:text="@string/explore"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="38sp" />
+        android:textSize="38sp"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -28,7 +28,7 @@
         android:text="@string/your_music"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="38sp" />
+        android:textSize="38sp"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -36,7 +36,7 @@
         android:text="@string/get_your_all_music_here"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="18sp" />
+        android:textSize="18sp"/>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -45,6 +45,8 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp">
         <EditText
+            android:inputType="text"
+            android:textColor="@color/white"
             android:hint="@string/hint1"
             android:textColorHint="@color/gray"
             android:paddingStart="20dp"
@@ -59,7 +61,6 @@
             android:layout_height="40dp"
             android:padding="5dp"
             android:layout_marginEnd="7dp"
-            android:background="@drawable/rounded_shape"
             android:src="@drawable/search_icon"
             android:layout_alignParentEnd="true"/>
     </RelativeLayout>
@@ -77,6 +78,5 @@
         android:layout_width="match_parent"
         android:id="@+id/recyclerViewHome"
         android:layout_height="wrap_content"
-        tools:listitem="@layout/music_view"
-        tools:itemCount="10"/>
+        tools:listitem="@layout/music_view"/>
 </LinearLayout>
